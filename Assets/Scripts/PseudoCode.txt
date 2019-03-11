@@ -1,0 +1,20 @@
+Run ()
+	BuildTileGrid()
+	BuildPropagator()
+	Loop until finished:
+		Observe()
+		Propagate()
+	Output Observations
+
+Observe()
+	FindLowestEntropy() //Entropy = the number of possible samples on the given tile
+	if there is a contradiction //Contradiction = when there are no possible tiles
+		Throw error & quit
+	if all cells are at entropy 0
+		processing complete
+		return observations
+	else
+		Choose tile with the lowest entropy
+		Select a sample
+		set the sample to a tile within the tilegrid
+
