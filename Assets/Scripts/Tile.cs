@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour
+public class Tile
 {
-    // Start is called before the first frame update
-    void Start()
+    Vector3Int _index;
+    bool[] _PossibleSamples; // 
+   
+    public Tile ()
     {
-        
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public Tile(int x, int y, int z)
     {
-        
+        _index = new Vector3Int(x, y, z);
     }
 }
