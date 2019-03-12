@@ -1,13 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Tile
 {
     Vector3Int _index;
-    bool[] _PossibleSamples; // 
-   
-    public Tile ()
+    bool[] _possibleSamples; //boolean list of all the remaining possible samples
+    public int Entropy
+    {
+        get
+        {
+            return _possibleSamples.Count(b => b == true);
+        }
+    }
+
+    public Tile()
     {
 
     }

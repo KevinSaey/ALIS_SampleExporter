@@ -8,15 +8,18 @@ public class ControllerWFC : MonoBehaviour
     Vector3Int _size;
 
     TileGrid _tileGrid;
+    List<SamplePattern> _samples = new List<SamplePattern>();
 
     void Start()
     {
         _tileGrid = new TileGrid(_size);
+        LoadSamples();
     }
 
-    
-    void Update()
+    public void LoadSamples()
     {
-        
+        var rhinoImport = new RhinoSampleImporter(_samples);
     }
+    
+    
 }
